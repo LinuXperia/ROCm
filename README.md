@@ -484,7 +484,9 @@ The repo tool from Google® allows you to manage multiple git repositories simul
 	curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 	chmod a+x ~/bin/repo
 
-Note: You can choose a different folder to install the repo into if you desire. ~/bin/ is used as an example.
+### Installing the Dependencies
+
+	sudo apt-get install python-minimal
 
 ### Downloading the ROCm Source Code
 The following example shows how to use the repo binary to download the ROCm source code. If you choose a directory other than ~/bin/ to install the repo, you must use that chosen directory in the code as shown below:
@@ -492,7 +494,7 @@ The following example shows how to use the repo binary to download the ROCm sour
 	mkdir -p ~/ROCm/
 	cd ~/ROCm/
 	~/bin/repo init -u https://github.com/RadeonOpenCompute/ROCm.git -b roc-2.10.0
-	repo sync
+	~/bin/repo sync
 
 Note: Using this sample code will cause the repo to download the open source code associated with this ROCm release. Ensure that you have ssh-keys configured on your machine for your GitHub ID prior to the download.
 
